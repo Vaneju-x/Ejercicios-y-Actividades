@@ -1,0 +1,24 @@
+*{
+    background-color: rgb(202, 141, 153);
+    color:rgb(112, 64, 80);
+}
+
+p{ /* Selectores de tipo*/
+    color: rgb(8, 9, 46)
+}
+
+ol,ol,span{
+    color:rgb(85, 61, 2)
+}
+
+#
+parrafo-principal {
+    font-size:30px;
+        color:navy
+}
+
+span{
+    color: rgba(90, 9, 136, 0.918);
+    font-size: 35px;
+        text-align:center;
+    }
