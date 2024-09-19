@@ -36,7 +36,7 @@ background-color: #FFFFCC;
 }
 /*Todos los elementos <span> contenidos en la clase "normal" 
 font-weight: bold;*/
-span{
+.normal span{
     font-weight: bold;
     
 }
@@ -44,7 +44,7 @@ span{
 /* Todos los elementos <em> con la clase "especial" en toda la página 
 color: #FFFF00;
 background: #000000;*/ 
-em{
+.especial {
        color: #FFFF00;
 background: #000000;
 }
