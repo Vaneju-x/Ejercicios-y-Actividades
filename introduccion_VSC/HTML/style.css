@@ -1,11 +1,17 @@
 *{
     background-color: crimson;
     color:palevioletred;
+    font-family:"Sofadi One", system-ui;
 }
 
 p{ /* Selectores de tipo*/
-    color: blue
+    color: blue;
 }
+
+p::first-letter{
+    color:seagreen;
+}
+
 
 ol,ol,span{
     color:goldenrod
@@ -16,8 +22,28 @@ ol,ol,span{
         color:navy
 }
 
+h1 {
+    text-align:center;
+        color:black;
+}
+
+h1:hover {
+    color:#17a589;
+}
+
+
+
+/*selectores de clase */
 .verso-poema{
     background-color: aqua;
     font-size: 60px;
         text-align:center;
     }
+
+    div#seccion-principal{
+        border:10px solid #17a589;
+        padding:200px 30px 100px 28px;
+        margin: 70px
+    }/* TRouBLe Top, Right, Bottom, Left */
+
+    
