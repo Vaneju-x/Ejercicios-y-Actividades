@@ -12,11 +12,13 @@
     
     <main>
         <section>
-            <form action="" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
+            <form action="https://formsubmit.co/vaneju97@gmail.com" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
                 <fieldset><!-- Permite agrupar por campos -->
                     <legend>Datos básicos de contactos</legend>
-                    Nombre: <input type="text" placeholder="Juanita" name="nombres"> <br>
-                    Apellodo<input type="" placeholder="Ruiz" name="apellidos"><br>
+                    <!--La asociación semántica con la etiqueta label, puede hacerse con las etiquetas por separado, como en las líneas 19 y 20 o anidadas, como en la línea 21 -->
+                    <label>Nombre:</label>
+                         <input type="text" placeholder="Juanita" name="nombres"> <br>
+                    <label for="">Apellodo<input type="" placeholder="Ruiz" name="apellidos"></label><br>
                     Correo Electronico <input type="email" placeholder="JuanitaR@gmail.com" required name="email"> <br>
                     Teléfono: <input type="tel" placeholder="2245394780" name="numeroTelefonico">
                     Teléfono 2: <input type="tel" placeholder="2245394790" name="numeroTelefonico2">
@@ -29,15 +31,20 @@
                  </fieldset>
                  <fieldset>
                     <legend>Datos del envío </legend>
+                        <!--agrupamos input con el mismo name/ El atributo name debe de ser igual para todas las opciones input type radio para que solo se pueda seleccionar una opcion y no todas -->
+                       <label for="recoger-en-sucursal"> <input id="recoger-en-sucursal"type="radio" name="tipo-de-envio"> Recoger en sucursal</label>
+                       <label for="envio-a-domicilio"> <input id="envio-a-domicilio" type="radio" name="tipo-de-envio"> Envió a domicilio</label>
+                       <label for="delivery"> <input id="delivery" type="radio" name="tipo-de-envio"> Delivery</label>
+                        <br>
                     <select name="" id=""><!-- Con el select, el usuario debe hacer scroll infinito hasta encontrar la opción deseada -->
-                        <option value="sucursal-coyoacan"> Sucursal Coyoacán </option>
-                        <option value="sucursal-san-martin-de-las-flores"> Sucursal San Martín de las Flores </option>
-                        <option value="sucursal-xochimilco"> Sucursal Xochimilco </option>
-                        <option value="sucursal-satelite"> Sucursal Satélite </option>
-                        <option value="sucursal-ecatepec"> Sucursal Ecatepec </option>
-                        <option value="sucursal-guadalajara"> Sucursal Guadalajara </option>
-                        <option value="sucursal-waverly-place"> Sucursal Waverly Place </option>
-                        <option value="sucursal-mazatlan"> Sucursal Mazatlán </option>
+                        <option value="sucursal-coyoacan" name="sucursal-coyoacan">Sucursal Coyoacán</option>
+                        <option value="sucursal-san-martin-de-las-flores"name="sucursal-san.sucursal-san-martin-de-las-flores"> Sucursal San Martín de las Flores </option>
+                        <option value="sucursal-xochimilco" name="sucursal-xochimilco">Sucursal Xochimilco</option>
+                        <option value="sucursal-satelite"name="sucursal-satelite"> Sucursal Satélite</option>
+                        <option value="sucursal-ecatepec"name="sucursal-ecatepec">Sucursal Ecatepec</option>
+                        <option value="sucursal-guadalajara"name="sucursal-guadalajara">Sucursal Guadalajara  </option>
+                        <option value="sucursal-waverly-place"name="sucursal-waverly-place">Sucursal Waverly Place</option>
+                        <option value="sucursal-mazatlan" name="sucursal-mazatlan">Sucursal Mazatlán </option>
                     </select>
                     <br>
                     <!--Esta forma le da la opcion al ususario para escoger apartir de la primera letra de lo que busca, que es una data list-->
@@ -53,6 +60,10 @@
                         <option value="sucursal-mazatlan"> Sucursal Mazatlán </option> 
                     </datalist>
                     <br>
+                    <!--casilla de verificación-->
+                    <input type="checkbox" required>Acepto los terminos y Condiciones
+                    <br>
+                    <!--input -->
                 <button type="submit">Ámonos recio</button>
                                        
                  </fieldset>
