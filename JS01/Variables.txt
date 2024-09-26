@@ -1,0 +1,36 @@
+let x=1;
+console.log(x);
+
+let modeloAutomovil = "Fiat";
+let miEdad = 27;
+let a = 38;
+let b = 14;
+let suma = a + b ;
+console.log(suma);
+
+let articulo1 = "muñeca", articulo2 = "osoDePeluche", articulo3 = "carrito";
+/* diferencia =, ==, ===
+Javascrip, este operador es usado para "asignar".
+Javascrip igual a o equal to > ==, se utilizan habitualmente en condiciones
+=== existe y se utiliza para hacer el equal to o igual
+*/
+/*Declaracion de variable*/
+let sum = 2+1;
+/*let > tipo de declaración*/
+/*sum> nombre de la variable*/
+/* = > asignación de valor*/
+/*2 + 1 > Valor o aquello que esta "dentro" de variable*/
+let medicina, revista, dulce;/* Variables nombradas o creadas pero no asignadas o sin valor*/
+/* una sentencia es una sola linea de texto*/
+let fruta1= "Sandia",
+fruta2 = "Melon",
+fruta3= "Durazno";
+/* Tipo de declaración
+var > tipo de declaración que se usaba antes del 2015
+let >  cuando nuestra variable puede cambiar o necesita cambiar
+const > no va a cambiar o no puede cambiar*/
+const rfc= "bwdhwekbqebqeh";
+let cantidadPendiente = 2125.08;
+
+/* */
+/* */
