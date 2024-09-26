@@ -1,0 +1,73 @@
+#columna,
+#fila{
+    background: rgb(70,252,250);
+    background: radial-gradient(circle, rgba(70,252,250,1) 46%, rgba(63,94,251,1) 100%);
+  }
+
+  #tituloPrincipal::first-line{
+      font-style:800px;
+      height:50px;
+      color:var(--color_texto)
+}  
+
+#tituloPrincipal, 
+#subtitulo,
+#pietitulo{
+  /* <weight>: Use a value from 100 to 900*/
+  font-family: "Courgette", cursive;
+  font-weight: 500;
+  font-style: normal;
+  color:#181a4e;
+}
+
+p{
+  /* <weight>: Use a value from 100 to 700*/
+   font-family: "Gowun Batang", serif;
+   font-weight: 200;
+   font-style: normal;
+   margin:50px 50px;
+   color:#6d2f73;
+  }
+/*para la imagen*/
+ 
+  .box {
+  
+  font-size: 10vh;
+  margin:0px 0px;
+  color:var(--bs-primary-border-subtle);
+  
+  }
+ 
+  #numeroDeHobbie,
+  #opcionesTabla {
+  /* <weight>: Use a value from 300 to 700  */
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+th{
+  /* <weight>: Use a value from 300 to 700  */
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+:root{/* Bootstrap Colors/CSS variables https://getbootstrap.com/docs/5.3/customize/color/https://getbootstrap.com/docs/5.3/customize/css-variables/#root-variables  */
+  --bs-primary-border-subtle:5px solid darkblue;
+
+}
+
+
+
+
+
+
+  
+
+  
+
+
