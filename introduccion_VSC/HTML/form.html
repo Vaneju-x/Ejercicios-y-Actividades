@@ -4,39 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contactanos</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="shortcut icon" href="tamal.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1> Haz tus pedidos ya </h1>
+        <nav>
+            <ul>
+                <li class="elementos-navegacion"> 
+                    <a href="index.html"> Inicio </a> 
+                </li>
+                <li class="elementos-navegacion"> 
+                    <a href="https://www.unam.mx/#" target="_blank"> Nosotros </a>
+                </li>
+                <li class="elementos-navegacion"> 
+                    <a href=""> Productos destacados </a>
+                </li>
+                <li class="elementos-navegacion">
+                    <a href=""> Contacto </a>
+                </li>
+            </ul>
+        </nav>
     </header>
     
     <main>
         <section>
+        <h1> Haz tus pedidos ya </h1>
             <form action="https://formsubmit.co/vaneju97@gmail.com" method="post"><!-- El valor del atributo action es la url a donde mandaremos nuestra info del formulario. En el atributo method indicamos el tipo de método http que utilizaremos -->
-                <fieldset><!-- Permite agrupar por campos -->
+                <fieldset id="datos-de-contacto"><!-- Permite agrupar por campos -->
                     <legend>Datos básicos de contactos</legend>
                     <!--La asociación semántica con la etiqueta label, puede hacerse con las etiquetas por separado, como en las líneas 19 y 20 o anidadas, como en la línea 21 -->
-                    <label>Nombre:</label>
-                         <input type="text" placeholder="Juanita" name="nombres"> <br>
-                    <label for="">Apellodo<input type="" placeholder="Ruiz" name="apellidos"></label><br>
-                    Correo Electronico <input type="email" placeholder="JuanitaR@gmail.com" required name="email"> <br>
-                    Teléfono: <input type="tel" placeholder="2245394780" name="numeroTelefonico">
-                    Teléfono 2: <input type="tel" placeholder="2245394790" name="numeroTelefonico2">
+                    <label for="nombre">Nombre:
+                        <input id="nombre" type="text" placeholder="Juanita" name="nombres" required> 
+                    </label>
+                         <input type="text" placeholder="Juanita" name="nombres"> 
+                    <label for="apellido">Apellodo:<input type="text" placeholder="Ruiz" name="apellidos" required>
+                    </label>
+                    <label for="email"> Correo Electronico <input type="email" placeholder="JuanitaR@gmail.com" name="apellido" required name="email"> </label>
+                    <label for="telefono">Teléfono: <input type="tel" placeholder="2245394780" name="numeroTelefonico" required></label>
+                    <label for="telefono2"></label>Teléfono 2: <input type="tel" placeholder="2245394790" name="numeroTelefonico2"required></label>
                  </fieldset>
-                 <fieldset>
+                 <fieldset id="datos-del-pedido">
                     <legend>Datos del pedido</legend>
                     <span>El número minimo de tamales para hacer un pedido es apartir de 20 piezas a 300, ¡Gracias por tu comprencion!</span><br>
                     Número de Tamales: <input type="number" min="20" max="300" name="cantidadDeTamales"><br>
                     Fecha de Entrega:<input type="date" name="fechaDeEntrega"> 
                  </fieldset>
-                 <fieldset>
+                 <fieldset id="datos-del-envio">
                     <legend>Datos del envío </legend>
                         <!--agrupamos input con el mismo name/ El atributo name debe de ser igual para todas las opciones input type radio para que solo se pueda seleccionar una opcion y no todas -->
+                        <!-- El valor del atributo for, en label, debe ser igual al valor del atributo id del input correspondiente -->
                        <label for="recoger-en-sucursal"> <input id="recoger-en-sucursal"type="radio" name="tipo-de-envio"> Recoger en sucursal</label>
                        <label for="envio-a-domicilio"> <input id="envio-a-domicilio" type="radio" name="tipo-de-envio"> Envió a domicilio</label>
                        <label for="delivery"> <input id="delivery" type="radio" name="tipo-de-envio"> Delivery</label>
                         <br>
-                    <select name="" id=""><!-- Con el select, el usuario debe hacer scroll infinito hasta encontrar la opción deseada -->
+                   
+                    <select name="sucursales"><!-- Con el select, el usuario debe hacer scroll infinito hasta encontrar la opción deseada -->
                         <option value="sucursal-coyoacan" name="sucursal-coyoacan">Sucursal Coyoacán</option>
                         <option value="sucursal-san-martin-de-las-flores"name="sucursal-san.sucursal-san-martin-de-las-flores"> Sucursal San Martín de las Flores </option>
                         <option value="sucursal-xochimilco" name="sucursal-xochimilco">Sucursal Xochimilco</option>
@@ -47,21 +73,22 @@
                         <option value="sucursal-mazatlan" name="sucursal-mazatlan">Sucursal Mazatlán </option>
                     </select>
                     <br>
+
                     <!--Esta forma le da la opcion al ususario para escoger apartir de la primera letra de lo que busca, que es una data list-->
-                    <input list="sucursal">
+                    Por favor, escoge una sucursal:<input list="sucursal">
                     <datalist id="sucursal">    
-                        <option value="sucursal-coyoacan"> Sucursal Coyoacán </option>
-                        <option value="sucursal-san-martin-de-las-flores"> Sucursal San Martín de las Flores </option>
-                        <option value="sucursal-xochimilco"> Sucursal Xochimilco </option>
-                        <option value="sucursal-satelite"> Sucursal Satélite </option>
-                        <option value="sucursal-ecatepec"> Sucursal Ecatepec </option>
-                        <option value="sucursal-guadalajara"> Sucursal Guadalajara </option>
-                        <option value="sucursal-waverly-place"> Sucursal Waverly Place </option>
-                        <option value="sucursal-mazatlan"> Sucursal Mazatlán </option> 
+                        <option value="sucursal-coyoacan"></option>
+                        <option value="sucursal-san-martin-de-las-flores"></option>
+                        <option value="sucursal-xochimilco"></option>
+                        <option value="sucursal-satelite"></option>
+                        <option value="sucursal-ecatepec"></option>
+                        <option value="sucursal-guadalajara">  </option>
+                        <option value="sucursal-waverly-place"></option>
+                        <option value="sucursal-mazatlan"></option> 
                     </datalist>
                     <br>
                     <!--casilla de verificación-->
-                    <input type="checkbox" required>Acepto los terminos y Condiciones
+                    <input type="checkbox" name="terminos-y-condiciones" required>Acepto los terminos y Condiciones
                     <br>
                     <!--input -->
                 <button type="submit">Ámonos recio</button>
