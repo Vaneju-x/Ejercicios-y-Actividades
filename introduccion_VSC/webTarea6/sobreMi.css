@@ -57,17 +57,19 @@ th{
 }
 
 :root{/* Bootstrap Colors/CSS variables https://getbootstrap.com/docs/5.3/customize/color/https://getbootstrap.com/docs/5.3/customize/css-variables/#root-variables  */
-  --bs-primary-border-subtle:5px solid darkblue;
-
+  --bs-primary-border-subtle:10px solid darkblue;
 }
 
-
-
-
-
-
-  
-
-  
-
-
+#imagenTabla{
+  font-size: 10vh;
+  margin:5px 2px;
+  color:var(--bs-primary-border-subtle);
+  width:220px ;
+  height:220px;
+  border-radius: 10% 50%;/* Bootstrap https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
+  border:5px double; 
+  }
+#cuadro{
+  border: rgb(7, 17, 157) 3px double; 
+  border-top-left-radius: 40%; /* Bootstrap  https://developer.mozilla.org/es/docs/Web/CSS/border-top-left-radius*/
+}
