@@ -8,7 +8,7 @@ Función: Conjunto de instrucciones que realiza una tarea o calcula un valor.
 
 
   ----------- Funciones declaradas --------------
-    (function declaration, function statement)
+    (function declaration, function statement) 
 Una característica de las funciones declaradas es que tien hoisting.
 
 sintaxis:
@@ -166,3 +166,93 @@ imprimirMensajeUsandoCallBacks("Alice in Borderland", imprimirEnConsola );
 
 imprimirMensajeUsandoCallBacks("Volver al futuro 1", function(mensaje){ console.warn("!"+mensaje) } );
 imprimirMensajeUsandoCallBacks("Volver al futuro 2", (mensaje)=> console.warn("!!"+mensaje) );
+
+/*
+ Realizar una función (ejecutarOperacion) que pueda ejecutar operaciones matemáticas.
+ Inicialmente va a funcionar con sumar y restar.
+ La función "ejecutarOperacion" recibe como parámetros:
+   valorA: primer valor para la operación
+   valorB: segundo valor para la operación
+   fncCallBackOperacion: función de callback con la operación a realizar
+ La función "ejecutarOperación" debe realizar lo siguiente:
+ 
+ - Enviar un mensaje de Bienvenida
+ - Realizar la operación 
+ - Mostrar el resultado en la consola
+*/
+
+
+function sumar(a, b) {
+    return a + b;
+  }
+// const sumar = (a, b) => a + b;
+
+function restar(a, b) {
+    return a - b;
+  }
+  // const restar = (a, b) => a -b
+
+function ejecutarOperacion(valorA, valorB, fncCallBackOperacion) {
+    console.log("¡Bienvenida a CH46!");
+  
+    const resultado = fncCallBackOperacion(valorA, valorB);
+  
+    console.log(`El resultado de la operación es: ${resultado}`);
+  }
+/**
+ *  const ejecutarOperacion = (valorA, valorB, fncCallBackOperacion) => {
+ *    // cuerpo de la función
+ * }
+ */
+
+ejecutarOperacion(11, 6, sumar ); // 17
+ejecutarOperacion(11, 6, restar ); // 5
+
+
+ejecutarOperacion(11, 6, (a,b)=> a/b ) // 1.8333333333333333
+ejecutarOperacion(4, 3, (a,b)=> a**b ) // 64
+// ValorA residuo ValorB?
+ejecutarOperacion(4, 3, (a,b)=> a%b ) // 1
+
+/**
+ *  Cambiar atuendo a mi ternurín
+ * 
+ *  Realizar 3 funciones de cambio de atuendo:
+ *  - Función cambiarRapido(atuendo)
+ *    Enviar un mensaje a la consola que indique que el atuendo(nombre) se cambia en 2 minutos
+ * 
+ *  - Función cambiarConAccesorios(atuendo)
+ *   Enviar un mensaje a la consola que indique que el atuendo(nombre) se cambia en 5 minutos
+ *   e incluye accesorios
+ * 
+ *  - Función cambiarComplejo(atuendo)
+ *   Enviar un mensaje a la consola que indique que el atuendo(nombre) se cambia en 10 minutos
+ *   e incluye accesorios y muchos detalles.
+ * 
+ *  
+ *   Genera una función principal( cambiarAtuendo ) que reciba como parámetros:
+ *    > nombre: nombre del ternurín
+ *    > atuendo: ropa del turnirín
+ *    > fncCallback: función para cambiar el atuendo
+ * 
+ *   Invocar la función cambiarAtuendo con los 3 tipos de atuendo: rapido, accesorios y complejo.
+ */ 
+ /* window + . para los emojis*/
+
+
+ function cambiarRapido(atuendo, nombre = "mi Ternurin") {
+    return(`Atuendo ${atuendo}se cambia ${atuendo} en 2 minutos😁`);
+ }
+ function cambiarConAccesorios (atuendo, nombre = "mi Ternurin"){
+    return(`Atuendo ${atuendo}se cambia ${atuendo} en 5 minutos e incluye accesorios`);
+ }
+ function cambiarComplejo (atuendo, nombre = "mi Ternurin") {
+    return(`Atuendo ${atuendo}se cambia ${atuendo} en 10 minutos e incluye accesorios y muchos detalles.`);
+ }
+
+ function cambiarAtuendo(atuendo,nombre,fncCallbackAtuendo){
+ }
+
+CambiarAtuendo(cambiarRapido);
+CambiarAtuendo(cambiarConAccesorios);
+CambiarAtuendo(cambiarComplejo);
